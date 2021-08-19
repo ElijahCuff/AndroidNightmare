@@ -16,3 +16,6 @@ Uninstalling will destroy files forever.
 All of these things could be addressed easily using a decentralized system, this application is purely centralized apart from transaction verification.
        
     
+   
+  
+> uses Bitcoin transaction Verification file found here, https://github.com/GreyJustice/BitcoinTransactionChecker
