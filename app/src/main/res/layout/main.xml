@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+				android:text="@string/warning"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#E3301A"
+				android:padding="25dp"
+				android:textStyle="bold"
+				android:textColor="#FFFFFF"
+				android:id="@+id/mainTextView1"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:elevation="10dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/step1"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_below="@id/mainTextView1"
+				android:layout_margin="10dp"
+				android:id="@+id/mainTextView2"
+				android:layout_centerHorizontal="true"
+				android:textStyle="bold"
+				android:textColor="#E83529"
+				android:elevation="4dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/wallet_address"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_below="@id/mainTextView2"
+				android:layout_centerHorizontal="true"
+				android:textIsSelectable="true"
+				android:id="@+id/mainTextView3"
+				android:layout_marginTop="10dp"
+				android:textStyle="bold"
+				android:textColor="#000000"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/wallet_type"
+				android:layout_below="@id/mainTextView3"
+				android:id="@+id/mainTextView4"
+				android:layout_marginBottom="25dp"
+				android:layout_marginLeft="10dp"
+				android:layout_centerHorizontal="true"
+				android:textColor="#404040"
+				android:layout_marginTop="8dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/mainTextView4">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/step2"
+					android:id="@+id/mainTextView5"
+					android:layout_margin="10dp"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					style="@style/AppTheme"
+					android:layout_centerHorizontal="true"
+					android:textColor="#5A5A5A"/>
+
+				<EditText
+					android:layout_width="wrap_content"
+					android:inputType="textPassword"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:hint="Transaction ID"
+					android:id="@+id/txid"
+					android:layout_centerHorizontal="true"
+					android:layout_marginBottom="10dp"
+					android:gravity="center_vertical|center_horizontal"
+					android:layout_below="@id/mainTextView5"
+					android:layout_marginTop="10dp"
+					android:text="@string/demo_txid"
+					android:textColor="#151515"/>
+
+				<Button
+					android:layout_width="wrap_content"
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="wrap_content"
+					android:text="VERIFY PAYMENT"
+					android:layout_below="@id/txid"
+					android:layout_centerHorizontal="true"
+					android:onClick="verify"
+					android:id="@+id/verifyBotton"
+					android:textStyle="bold"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="#BA281F"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="LOG"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:layout_below="@id/verifyBotton"
+					android:layout_marginLeft="25dp"
+					android:id="@+id/mainTextView6"
+					android:layout_marginTop="35dp"
+					android:textStyle="bold"
+					android:textColor="#2E2E2E"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="100dp"
+					android:layout_below="@id/mainTextView6"
+					android:layout_marginLeft="25dp"
+					android:layout_marginRight="25dp"
+					android:id="@+id/log"
+					android:padding="10dp"
+					android:background="#3A3A3A"
+					android:textColor="#FFFFFF"
+					android:elevation="10dp"
+					android:textStyle="bold"
+					android:maxLines="8"
+					android:minLines="8"/>
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
