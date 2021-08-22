@@ -44,13 +44,25 @@ Uninstalling will destroy files forever.
 • Reverse Engineering to Enable Instant Decryption     
 • Root Access to get AES key from data directory     
     
+### UPDATE TO ANDROID NIGHTMARE    
+• Takes control of device via lockTaskMode()     
+• TxID can only be verified Once, so Demo TxID was removed     
+• Decryption Key is now only valid while the application is running, Closing the app - Restarting device, Uninstalling or Power Off is now dangerous.     
+• Control of Android 10 devices is restricted to Plugging IN a charger only   
+• Migrated Strings to not be Hard Coded in Java - for easier Translation     
+• Everything is  now configured by the strings file for editing APK file after compilation ( Easier to Reverse Engineer for changing package appearance ).       
+• Codes changed for targeting android 10 and 11 devices    
+• Payment Verification Script UPDATED > New TxID verification is added in PHPbackend  ( Stop Reusing Old TxID's )        
+  
 ### TO:DO    
-• TxID verification of time since install    
-• Encrypted messages to server through PGP keys on both ends   
-• Obfuscation of strings and functions   
-• Decentralized key provider   
-• Automatic key removal when closing the app (session only keys)   
+• Unique Bitcoin Wallet generation by Payment Script   
+• Transfer from Unique Wallet to Master Wallet in Payment Script ( hide real Bitcoin address )    
+• Conversion to POST methods using asymmetrical encryption keys on both ends ( you respond to me with this public key, ok then you respond to me with my public key.   
+  
+   
+•     
  
+
    
 ## PROGRESS    
 • Automatic key removal, session ONLY valid keys.   
