@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.greyjustice.randyandy" >
+    package="android.nightmare" >
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
-	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<application
         android:allowBackup="true"
 		android:requestLegacyExternalStorage="true"
@@ -14,12 +14,12 @@
         android:theme="@style/AppTheme"
 		android:resizeableActivity = "true">
         <activity
-            android:name=".MainActivity"
+            android:name=".DiversionActivity"
 			android:launchMode="singleTop"
+			android:lockTaskMode="always"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
