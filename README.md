@@ -26,7 +26,7 @@ For people using a device that has nothing on it - absolutely no important files
 https://www.apkfiles.com/apk-609697/android-nightmare   
  
  
-Do not Install This Application unless testing 9n a Virtual Environment or a Empty Device, so nothing gets encrypted.    
+Do not Install This Application unless testing in a Virtual Environment or a Empty Device, so nothing gets encrypted.    
    
 
 
