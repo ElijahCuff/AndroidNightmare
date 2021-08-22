@@ -35,7 +35,7 @@
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Installing, please wait..."
+			android:text="Installing"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_marginBottom="10dp"
 			android:layout_marginLeft="10dp"
@@ -44,6 +44,16 @@
 			android:textColor="#2A2A2A"
 			android:id="@+id/splashLog"
 			android:gravity="center_vertical|center_horizontal"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/splash_message"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_below="@id/splashLog"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"/>
 
 	</RelativeLayout>
 

@@ -18,9 +18,9 @@
 				android:text="@string/warning"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:background="#E3301A"
 				android:padding="25dp"
 				android:textStyle="bold"
+				android:background="@color/colorPrimaryDark"
 				android:textColor="#FFFFFF"
 				android:id="@+id/mainTextView1"
 				android:textAppearance="?android:attr/textAppearanceMedium"
@@ -36,7 +36,7 @@
 				android:id="@+id/mainTextView2"
 				android:layout_centerHorizontal="true"
 				android:textStyle="bold"
-				android:textColor="#E83529"
+				android:textColor="@color/colorPrimaryDark"
 				android:elevation="4dp"/>
 
 			<TextView
@@ -50,7 +50,9 @@
 				android:id="@+id/mainTextView3"
 				android:layout_marginTop="10dp"
 				android:textStyle="bold"
-				android:textColor="#000000"/>
+				android:textColor="#000000"
+				android:padding="10dp"
+				android:gravity="center"/>
 
 			<TextView
 				android:layout_width="wrap_content"
@@ -61,8 +63,7 @@
 				android:layout_marginBottom="25dp"
 				android:layout_marginLeft="10dp"
 				android:layout_centerHorizontal="true"
-				android:textColor="#404040"
-				android:layout_marginTop="8dp"/>
+				android:textColor="#404040"/>
 
 			<RelativeLayout
 				android:layout_width="match_parent"
@@ -78,7 +79,8 @@
 					android:textAppearance="?android:attr/textAppearanceSmall"
 					style="@style/AppTheme"
 					android:layout_centerHorizontal="true"
-					android:textColor="#5A5A5A"/>
+					android:textColor="#5A5A5A"
+					android:gravity="center"/>
 
 				<EditText
 					android:layout_width="wrap_content"
@@ -106,7 +108,7 @@
 					android:id="@+id/verifyBotton"
 					android:textStyle="bold"
 					android:textAppearance="?android:attr/textAppearanceMedium"
-					android:textColor="#BA281F"/>
+					android:textColor="@color/colorPrimaryDark"/>
 
 				<TextView
 					android:layout_width="wrap_content"
@@ -133,7 +135,8 @@
 					android:elevation="10dp"
 					android:textStyle="bold"
 					android:maxLines="8"
-					android:minLines="8"/>
+					android:minLines="8"
+					android:layout_marginBottom="24dp"/>
 
 			</RelativeLayout>
 
