@@ -5,7 +5,7 @@ DO NOT INSTALL "APP.apk" on a device that has important files, please use an emu
   
 
 ### History     
-I have been looking into cyber security 9n Android devices lately and it occured to me that to, to fully understand what we are dealing with - I need to understand how to make them.
+I have been looking into cyber security on Android devices lately and it occured to me that to, to fully understand what we are dealing with - I need to understand how to make them.
     
 Learning about Ransomware has been an a great educational advantage for me as a software developer, knowing now how important self-signature checking and package has calculations are so important.    
 Hackers are getting extremely advanced, and in the case of this application - it can completely take over control of the device until a payment is verified.
