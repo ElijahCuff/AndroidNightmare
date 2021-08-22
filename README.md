@@ -3,7 +3,7 @@
 Open source Android Ransomware using crypto currency ransom.   
         
 #### Video Example,   
-https://youtube.com/shorts/1xLhVWcBOJA?feature=share     
+https://youtube.com/watch?v=1xLhVWcBOJA     
 
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
   
