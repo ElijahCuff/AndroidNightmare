@@ -1,4 +1,5 @@
-# RandyAndy
+# Android Nightmare    
+#### Previously, RandyAndy
 Open source Android Ransomware using crypto currency ransom.   
      
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
