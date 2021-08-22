@@ -1,6 +1,9 @@
 # RandyAndy
 Open source Android Ransomware using crypto currency ransom.   
-   
+     
+DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
+  
+
 ### History     
 I have been looking into cyber security 9n Android devices lately and it occured to me that to, to fully understand what we are dealing with - I need to understand how to make them.
     
