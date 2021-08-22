@@ -50,7 +50,7 @@ Uninstalling will destroy files forever.
     
 ### UPDATE TO ANDROID NIGHTMARE    
 • Takes control of device via lockTaskMode()     
-• TxID can only be verified Once, so Demo TxID was removed     
+• TxID can only be verified Once with new backend - using old backend for safety.     
 • Decryption Key is now only valid while the application is running, Closing the app - Restarting device, Uninstalling or Power Off is now dangerous.     
 • Control of Android 10 devices is restricted to Plugging IN a charger only   
 • Migrated Strings to not be Hard Coded in Java - for easier Translation     
