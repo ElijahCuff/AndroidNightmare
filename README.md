@@ -2,6 +2,8 @@
 #### Previously, RandyAndy
 Open source Android Ransomware using crypto currency ransom.        
 
+#### Updated to accept Bitcoin verification in-app   
+
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
   
 
@@ -76,6 +78,3 @@ Uninstalling will destroy files forever.
 All of these things could be addressed easily using a decentralized system, this application is purely centralized apart from transaction verification.
        
     
-   
-  
-> uses Bitcoin transaction Verification file found here, https://github.com/GreyJustice/BitcoinTransactionChecker
