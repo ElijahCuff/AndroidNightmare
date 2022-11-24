@@ -1,4 +1,6 @@
 # Android Nightmare    
+![screen](https://github.com/ElijahCuff/AndroidNightmare/raw/main/Screenshot_20221125_033717_android.nightmare.jpg)
+     
 #### Previously, RandyAndy
 Open source Android Ransomware using crypto currency ransom.        
 
@@ -15,8 +17,7 @@ to
 <string name="Testing">false</string>
 ```
     
-![screen](https://github.com/ElijahCuff/AndroidNightmare/raw/main/Screenshot_20221125_033717_android.nightmare.jpg)
-     
+
 
 ### History     
 I have been looking into cyber security on Android devices lately and it occured to me that to fully understand what we are dealing with - I need to understand how to make them.
