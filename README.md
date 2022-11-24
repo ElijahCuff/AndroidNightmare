@@ -5,7 +5,8 @@ Open source Android Ransomware using crypto currency ransom.
 #### Updated to accept Bitcoin verification in-app   
 
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
-  
+       
+> The update is now set to "Testing Mode" by default ( Benign Mode ) for strings - change from `<string name="Testing">true</string>` to `<string name="Testing">false</string>`
 
 ### History     
 I have been looking into cyber security on Android devices lately and it occured to me that to fully understand what we are dealing with - I need to understand how to make them.
