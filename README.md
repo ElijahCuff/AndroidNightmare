@@ -15,7 +15,7 @@ to
 <string name="Testing">false</string>
 ```
     
-![screen](https://github.com/ElijahCuff/Technology-Induced-Schizophrenia-/blob/main/Screenshot_20221125_033717_android.nightmare.jpg)
+![screen](https://github.com/ElijahCuff/AndroidNightmare/raw/main/Screenshot_20221125_033717_android.nightmare.jpg)
      
 
 ### History     
