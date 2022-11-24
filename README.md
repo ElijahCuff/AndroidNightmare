@@ -1,9 +1,6 @@
 # Android Nightmare    
 #### Previously, RandyAndy
-Open source Android Ransomware using crypto currency ransom.   
-        
-#### Video Example,   
-https://youtube.com/watch?v=1xLhVWcBOJA     
+Open source Android Ransomware using crypto currency ransom.        
 
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
   
@@ -30,7 +27,7 @@ Certain features have been removed for the purpose of install safety, including 
    
   
 For people using a device that has nothing on it - absolutely no important files or at least an emulator with no important files, you can test a fully Active version of the application here,
-https://github.com/GreyJustice/AndroidNightmare/raw/main/app.apk   
+   
  
  
 Do not Install This Application unless testing in a Virtual Environment or a Empty Device, so nothing gets encrypted.    
