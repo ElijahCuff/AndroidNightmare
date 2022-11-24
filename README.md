@@ -4,7 +4,8 @@
 #### Previously, RandyAndy
 Open source Android Ransomware using crypto currency ransom.        
 
-#### Updated to accept Bitcoin verification in-app   
+#### Updated to accept Bitcoin verification in-app       
+> PHP Backend for verification is now removed. 
 
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
        
