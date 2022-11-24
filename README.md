@@ -5,7 +5,7 @@
 Open source Android Ransomware using crypto currency ransom.        
 
 #### Updated to accept Bitcoin verification in-app       
-> PHP Backend for verification is now removed. 
+> PHP Backend for verification is now removed in favour of direct connection to blockcypher 
 
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
        
