@@ -6,7 +6,17 @@ Open source Android Ransomware using crypto currency ransom.
 
 DO NOT INSTALL "APP.apk" on a device that has important files, please use an emulator or old empty device for testing purposes.    
        
-> The update is now set to "Testing Mode" by default ( Benign Mode ) for strings - change from `<string name="Testing">true</string>` to `<string name="Testing">false</string>`
+> The update is now set to "Testing Mode" by default ( Benign Mode ) for strings - change from 
+```
+<string name="Testing">true</string>
+```
+to
+```
+<string name="Testing">false</string>
+```
+    
+![screen](https://github.com/ElijahCuff/Technology-Induced-Schizophrenia-/blob/main/Screenshot_20221125_033717_android.nightmare.jpg)
+     
 
 ### History     
 I have been looking into cyber security on Android devices lately and it occured to me that to fully understand what we are dealing with - I need to understand how to make them.
