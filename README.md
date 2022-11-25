@@ -1,5 +1,5 @@
 # Android Nightmare    
-![screen](https://github.com/ElijahCuff/AndroidNightmare/raw/main/Screenshot_20221125_033717_android.nightmare.jpg)
+![screen](https://github.com/ElijahCuff/AndroidNightmare/blob/main/Screenshot_20221125_033717_android.jpg)
      
 #### Previously, RandyAndy
 Open source Android Ransomware using crypto currency ransom.        
